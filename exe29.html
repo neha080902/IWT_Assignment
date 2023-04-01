@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p1">Hello</p>
+        <p id="p2">Hy</p>
+    </body>
+    <script>
+        var size=10;
+        vari=0;
+        var wait=setInterval(increasing,50);
+        function increasing()
+        {
+            if(size<51)
+            {
+                size=size+1;
+                document.getElementById("p1").style.fontSize=(size+'pt');
+                document.getElementById("p1").style.color="purple";
+                document.getElementById("p2").style.visibility="hidden";
+            }
+            else
+            {
+                clearInterval(wait);
+                Wait=setInterval(decreasing,50);
+                document.getElementById("p1").style.visibility="hidden";
+                document.getElementById("p1").style.fontSize='1pt';
+                document.getElementById("p2").style.visibility="visible";
+            }
+        }
+        function decreasing()
+        {
+            if(size>5)
+            {
+                size=size-1;
+                document.getElementById("p2").style.fontSize=(size+'pt');
+                document.getElementById("p2").style.color="red";
+            }
+            else
+            {
+                clearInterval(Wait);
+            }
+        }
+    </script>
+</html>
